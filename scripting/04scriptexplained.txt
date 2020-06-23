@@ -1,0 +1,51 @@
+4. Writing and Executing a Script
+
+. hello.sh
+      |----------------------------------|
+      | #!/bin/bash (or #!/usr/bin/zsh)  |
+      | echo "Hello World"               |
+      | exit 0                           |
+      |----------------------------------|
+
+. #!/bin/bash
+
+	- this is always the first line of every script (aka, shebang)
+	- the shebang start with a comment but the sys still uses this line
+	- a comment in a shell script has the # symbol
+	- the shebang instructs the sys to the interpreter to execute the script
+
+. echo "Hello World" 
+
+	- the command 'echo' is a shell builtin command and is used to print a STDOUT
+	- the msg to print is enclosed in double-quotes
+
+. exit 0
+
+	- the exit cmd is a shell builtin and is used to exit the script
+	- The exit code is supplied as an integer argument
+	- A value anything other than 0 will indicate some error
+
+
+Executing the Script
+
+. will not be executed until you assign "execute permissions" for the script file
+
+	$ chmod +x hello.sh
+	$ ls -l
+	$ ./hello.sh
+	$ echo $?
+
+
+
+. $0 : the name of the script
+. $1 ~ $9 : the arguments of the script. $1 is the first argement, $2 the second and so on
+. $@ : all the arguments
+. $# : the number of arguments
+. $? : the return code of the previous command
+. $$ : PID (process id num) for the current script
+. !! : the entire last command including argments
+. $_ : the last argument from the last command
+
+
+
+
