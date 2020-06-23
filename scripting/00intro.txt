@@ -1,0 +1,10 @@
+Scripting with Bash: What and Why
+
+Topics
+. bash vulnerabilities
+. the bash command hierarchy
+. preparing text editors for scripting
+. creating and executing scripts
+. debugging scripts
+
+
