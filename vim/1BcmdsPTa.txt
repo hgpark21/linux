@@ -1,0 +1,68 @@
+Vim in a Nutshell
+
+. Editing a file /tmp/somefile
+
+	$ vi /tmp/somefile
+
+. Insert mode by hitting : <i>
+. Save and go back to the command mode : <ESC+:wq+Enter>
+
+. Move around:
+
+		k
+	     h    l
+		j
+
+	- w : to move the cursor to the right one word at a time
+	- b : to move the cursor to the left one word at a time
+	- $ : go to the end of the line
+	- ^ : go to the beginning of the line
+	- Enter : move to the beginning of the next line down
+	- Delete : move one char to the left
+	- Space Bar : move one char to the right
+	- L : the last line in the file
+	- M : middle of the file
+	- H : top of (the visible part of) the file (home)
+	- 10+Up/Down Arrow : go up/down 10 lines
+	- Ctrl+F : to scroll forward (move down) one screenful
+	- Ctrl+D : to scroll forward (move down) one half of the screen
+	- Ctrl+B : to scroll backward (move up) one screenful
+	- Ctrl+U : to scroll forward (move down) one half of the screen
+
+. Inserting Text
+
+	- a (append) : to insert text to the right of the cursor
+	- A  : to insert text to the end of the line
+	- i (insert) : to insert text to the left of the cursor
+	- I  : to insert text to the beginning of the line
+
+	- o : open a new line below the cursor
+	- O : open a new line above the cursor
+
+. Changing Text
+
+	- cw <new_word> : replace a word (place your cursor appropriately) 
+	- cc : replace a line
+	- s : substituting one or more chars
+	- r : replace one char
+
+. Deleting Text
+
+	- x : to delete one char (or space) after the cursor
+	- X : to delete one char (or space) before the cursor
+	- dw : to delete a word
+	- dd : to delete a line
+
+. Copy/Paste/Undo/Redo/Yank(?) ETC.
+
+	- dd : delete the current line (entire line)
+	- Y : copy or yank
+
+	    * 5Y to copy 5 lines
+	    * yG to copy all the lines below the cursor
+	    * y$ to copy the line on the cursor
+	
+	- p : paste
+	- u : undo
+	- Ctrl+R : redo
+
