@@ -1,0 +1,88 @@
+Vim Basics
+
+Using ex Commands
+
+<:set nu> (Enter)   to turn line numbers on
+<:set nonu> (Enter) to turn line numbers off
+
+<:set ic> (Enter)   to ignore case during search
+<:set noic> (Enter) to change back to the default, case-sensitive mode
+
+
+
+Copying Lines
+
+<:1,5 co 12> (Enter) to copy lines 1 through 5 and place the copied after line 12
+<:.,5 co 12> (Enter) to copy the range from the current line through 5 and insert the block after line 12
+
+<:6,$ co 2> (Enter) to copy the range from line 6 through the end of the file and insert the block after line 2
+
+
+Period (.) to denote "from the current line"
+Dollar sign ($) to denote "to end of file"
+
+Moving/Deleting Lines
+
+<:1,5 m 12> (Enter)
+<:1,5 d> (Enter)
+
+
+Searching and Replacing
+
+A char string is one or more chars in succession
+
+</ "char_string"> search the char string "char_string"
+	<n> to go to the next occurrence
+	<N> to go to the previous
+<? "shar_string"> to search BACKWARD in a file
+
+
+Certain special characters ( / & ! . ^ S \ ? ) have special significance to the search process and must be "escaped" (meaning \/ \& \! and so on. To escape a backslash itself, type <\\>) when they are used in a search:
+
+</anything\?> to search for the string "anything?"
+
+
+How to Make Searches More Precise (By Tagging)
+
+. the beginning of the line (^)
+	</^Search> to search the next line beginning with "Search"
+. the end of the line ($)
+	</search\.$> to search the next line ending with "search."
+. the beginning of the word (\<); the end of the word (\>)
+	"/\<beg" to search word starting with "beg"
+	"/ing\>" to search word ending with "ing"
+. any char (.)
+	"/.tion"
+
+
+Replacing a Char_String
+
+":g/search-string/s//replace-string/g" (Enter)
+":g/search-string/s//replace-string/gc" (Enter) ('c' consult)
+"Ctrl+C" to cancel a "consulted" search-and-replace
+
+
+Going to a Specific Line
+
+"10G" to go to the line 10
+"G" to go to the last line
+
+
+Inserting a File into Another
+
+"read" (insert) a file into the file you are editing
+
+":84 r filename"
+":r filename" - "read" file at the line on the cursor
+
+
+Source: https://docs.oracle.com/cd/E19683-01/806-7612/6jgfmsvq7/index.html
+	(Solaris Advanced User's Guide)
+
+
+
+
+
+
+
+
