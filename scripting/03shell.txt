@@ -1,0 +1,21 @@
+3. What is a Shell?
+
+A shell is just an interface to your OS.
+An interface shell allows you to type in commands through what is called standard input (STDIN), and get output through standard output (STDOUT) and standard error (STDERR).
+
+There are many shells: bash, csh, ksh, dash, zsh.
+
+Features of zsh
+
+. interactive tab completion
+. automated file searching
+. regex integration
+. advanced shorthand for defining command scope
+. rich theme engine
+
+Installing zsh
+
+. MacOS : $ sudo port install zsh
+
+
+
