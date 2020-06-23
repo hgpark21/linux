@@ -1,0 +1,32 @@
+2. Cmmd PATH
+
+When you type a cmmd into the cmmd prmpt in Linux, it doesn't look in every directory but it only looks to the ONES you specified. They are a part of environment variable, called $PATH, which your shell checks in order to know where to look.
+
+For example:
+
+	$ echo $PATH
+	# /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+How to Set Your PATH
+
+	$ export PATH=$PATH:/place/with/the/file
+
+You should be able to execute the script anywhere on your system without having to include the full path.
+
+But this is TEMPORARY. If you restart your computer, your addition to $PATH is gone. This is by design. The variable $PATH is set by your shell every time it launches.
+
+Set Your PATH PERMANENTLY
+
+How to check which shell you run
+
+	$ echo $0
+	# -zsh
+
+. $0 : the zeroth segment of a cmmd
+. $1 : the first segment of a cmmd, e.g., in "$ echo $0", "echo" maps to $1
+
+Add the line "export PATH=$PATH:/place/with/the/file to the appropriate file that will be read when your shell launches.
+
+
+
+
