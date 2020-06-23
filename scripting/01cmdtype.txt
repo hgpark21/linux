@@ -1,0 +1,20 @@
+1. (Bash) Command Type
+
+. alias : "aliases" exist in memery as a shortcut to cmmds or cmmds with ops
+. The type cmmd will display the type of cmmd for a given word entered
+. The types of cmmds are:
+	. alias
+	. function
+	. shell builtin
+	. file
+
+For example:
+
+	$ type ls quote pwd do id
+	# ls is /bin/ls
+	# quote not found
+	# pwd is a shell builtin
+	# do is a reserved word
+	# id is /usr/bin/id
+
+	
