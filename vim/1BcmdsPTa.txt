@@ -7,6 +7,12 @@ Vim in a Nutshell
 . Insert mode by hitting : <i>
 . Save and go back to the command mode : <ESC+:wq+Enter>
 
+Saving Changes and Quittings
+
+	<:w> : save the content of the buffer
+	<:wq> : save and quit
+	<:q> or <:q!> : just quit (not save) 
+
 . Move around:
 
 		k
@@ -52,17 +58,25 @@ Vim in a Nutshell
 	- X : to delete one char (or space) before the cursor
 	- dw : to delete a word
 	- dd : to delete a line
+		* to delete 5 lines, type <5dd>
 
 . Copy/Paste/Undo/Redo/Yank(?) ETC.
 
-	- dd : delete the current line (entire line)
-	- Y : copy or yank
+	- yy or Y (yank)
+	- p ("put below") or P ("put above")
 
-	    * 5Y to copy 5 lines
+	    * "11yy" to copy 11 lines count down from the cursor
 	    * yG to copy all the lines below the cursor
 	    * y$ to copy the line on the cursor
 	
-	- p : paste
 	- u : undo
 	- Ctrl+R : redo
 
+Using a Count to Repeat Commands
+
+	- <3dd> : repeats the command <dd> three times
+	- <2dw> : deletes two words
+	- <4x>  : deletes four chars
+	- <3w>, <3 Ctrl+F>, ...
+
+*** Typing a period (.) repeats the previous text changing commands
