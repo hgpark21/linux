@@ -1,0 +1,63 @@
+Linux Basic Commands, Part B
+
+<< grep >>
+
+To search for a particular char. string in a file. The basic syntax of the grep command is:
+
+	$ grep [ops] "char_string" [filename]
+
+A char string is one or more chars. A single letter is a string, as is a word or a sentence. String can include blank spaces, punctuation, and invisible (control) chars. 
+
+Option Description
+	-c : print only a count of the lines that match pattern
+	-h : display the matched line but do not display filename
+	-i : case-insensitive matching
+	-l : display list of filenames only
+	-n : display the matched lines and their line numbers
+	-v : display
+	-e exp :
+	-f file :
+	-E :
+	-w :
+	-o :
+
+grep as a filter(?)
+
+You can use the grep command as a filter with other commands, enabling you to filter our unnecessary information from the command output.
+
+	$ ls -l *.ps | grep Sep
+
+grep with multiword strings
+
+	$ grep "Louisa May" extensions
+
+The grep cmd can search for a string in a groups of files:
+ 
+	$ grep ar *
+
+Searching for Lines without a Certain String
+
+	$ grep -v e *
+
+"Metacharacters"
+
+. A caret (^) indicates the beginning of the line
+. A dollar-sign ($) indicates tne of the line
+. Within a regular expression, dot (.) finds any single character.
+. When an asterisk (*) follows a char, grep interprets the asterisk as "zero or more instances of that char."
+
+	$ grep 'qu*' list -- find all words with letters "qu" in them
+	$ grep 'nn*' list -- find all words with letters "n" in them
+	$ grep 'nnn*' list -- find all words with letters "nn" in them
+	$ grep .* list -- match zero or more occurrences of any char in list
+
+Single or Double Quotes on Command Lines
+
+The 'history' metacharacter (!) is always interpreted as a metacahr, even inside quotation marks, unless you escape it with a backslash (\).
+
+	$ grep $ list -- the sys displays all the lines in the file list
+	$ grep '\$' list -- displays only those lines that contain the "$" char
+
+ 
+
+	
