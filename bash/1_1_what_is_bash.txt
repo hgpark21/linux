@@ -1,0 +1,5 @@
+Title: What is Bash?
+
+Bash, 'Bourne-Again SHell,' is the shell, or command language interpreter.
+Bash is currently runs on nearly every version of UNIX and other OSs.
+
