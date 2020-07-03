@@ -1,0 +1,102 @@
+Vim in a Nutshell
+
+. Editing a file /tmp/somefile
+
+	$ vi /tmp/somefile
+
+. Insert mode by hitting : <i>
+. Save and go back to the command mode : <ESC+:wq+Enter>
+
+Saving Changes and Quittings
+
+	<:w> : save the content of the buffer
+	<:wq> : save and quit
+	<:q> or <:q!> : just quit (not save) 
+
+. Move around:
+
+		k
+	     h     l
+		j
+
+	- 'e' : to move the cursor to the end of a word at a time
+	- 'b' : to move the cursor to the left one word at a time
+	- 'w' : to move the cursor to the right one word at a time
+	- 'G' or ':1' : to move the cursor to the end of the file
+	- 'gg' : to move the cursor to the beginning of the file
+	- ':5' : move to the 5th line
+	- '$' : go to the end of the line
+	- '^' : go to the beginning of the line
+	- 'L' : the last line in the file
+	- 'M' : middle of the file
+	- 'H' : top of (the visible part of) the file (home)
+	- <Enter> : move to the beginning of the next line down
+	- <Delete> : move one char to the left
+	- <Space Bar> : move one char to the right
+	- <10+Up/Down Arrow> : go up/down 10 lines
+	- <Ctrl+F> : to scroll forward (move down) one screenful
+	- <Ctrl+D> : to scroll forward (move down) one half of the screen
+	- <Ctrl+B> : to scroll backward (move up) one screenful
+	- <Ctrl+U> : to scroll forward (move down) one half of the screen
+
+. Inserting Text
+
+	- a (append) : to insert text to the right of the cursor
+	- A  : to insert text to the end of the line
+	- i (insert) : to insert text to the left of the cursor
+	- I  : to insert text to the beginning of the line
+
+	- o : open a new line below the cursor
+	- O : open a new line above the cursor
+
+. Changing Text
+
+	- cw <new_word> : replace a word (place your cursor appropriately) 
+	- cc : replace a line
+	- s : substituting one or more chars
+	- r : replace one char
+
+. Deleting Text
+
+	- x : to delete one char (or space) after the cursor
+	- X : to delete one char (or space) before the cursor
+	- dw : to delete a word
+	- dd : to delete a line
+		* to delete 5 lines, type <5dd>
+
+. Copy/Paste/Undo/Redo/Yank(?) ETC.
+
+	- yy (yank the current line))			Ex: 10yy (yank 10 lines below) 
+	- yiw/yaw/ytw/yfx (yank the current word)
+	- dd (delete - cut the current line)	Ex: 10dd (cut 10 lines below)
+	- p ("put below") or P ("put above")
+	- gp/gP move the cursor after the pasted text
+	- v to select chars or V select the whole line
+
+	    * "11yy" to copy 11 lines count down from the cursor
+	    * yG to copy all the lines below the cursor
+	    * y$ to copy the line on the cursor
+	
+	- u : undo
+	- Ctrl+R : redo
+
+Using a Count to Repeat Commands
+
+	- <3dd> : repeats the command <dd> three times
+	- <2dw> : deletes two words
+	- <4x>  : deletes four chars
+	- <3w>, <3 Ctrl+F>, ...
+
+*** Typing a period (.) repeats the previous text changing commands
+
+Other Commands
+
+	:e ~/dummy
+	:w 	write a new buffer
+	:bp	switch to the previous buffer and to release *.swp
+	:r ~/dummy 	read the dummy file
+
+
+
+
+
